@@ -1,0 +1,48 @@
+<div class="show-mobile">
+  <div>
+    <button (click)="toggleMenu()">
+      <i class="material-icons">menu</i>
+    </button>
+    <a href="">
+      <!-- logo angular  web-->
+      <img width="100" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/AngularJS_logo.svg/800px-AngularJS_logo.svg.png" alt="logo">
+    </a>
+    <a href="">
+      <i class="material-icons">shopping_cart</i>
+      <span class="badge">{{ quantyProducts }}</span>
+    </a>
+  </div>
+  <div class="side-menu" [class.active]="showMenu">
+    <button (click)="toggleMenu()">Close</button>
+    <ul>
+      <li><a href="">All</a></li>
+      <li><a href="">Clothes</a></li>
+      <li><a href="">Electronics</a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="hide-mobile">
+  <div>
+    <nav>
+      <a class="logo" href="">
+        <img width="100" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/AngularJS_logo.svg/800px-AngularJS_logo.svg.png" alt="logo">
+
+      </a>
+      <ul>
+        <li><a href="">All</a></li>
+        <li><a href="">Clothes</a></li>
+        <li><a href="">Electronics</a></li>
+      </ul>
+    </nav>
+    <div class="info">
+      <div class="account">user@gmail.com</div>
+      <div>
+        <a href="">
+          <i class="material-icons">shopping_cart</i>
+          <span class="badge">{{ quantyProducts }}</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

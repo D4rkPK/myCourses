@@ -1,0 +1,29 @@
+<div class="card--product">
+  <div class="card--product__img">
+    <app-img class="card--product__img-image" [img]="product.image"></app-img>
+  </div>
+
+  <div class="card--product__bottom">
+    <div class="card--product__bottom-info">
+
+      <p>{{ product.price | currencyConvertion | currency:'Q' }}</p>
+
+      <div class="card--product__bottom-info__price">
+        <span>$</span>
+        <h2>{{product.price.toFixed(0) }}</h2>
+        <span>{{(product.price).toFixed(2).split('.')[1]}}</span>
+      </div>
+
+      <span class="card--product__bottom-info__title">
+        {{product.title}}
+      </span>
+    </div>
+
+    <div class="card--product__bottom-actions">
+      <button class="card--product__bottom-actions__add-to-cart" (click)="addToCart()">
+        <i class="material-icons">add_shopping_cart</i>
+      </button>
+    </div>
+
+  </div>
+</div>
