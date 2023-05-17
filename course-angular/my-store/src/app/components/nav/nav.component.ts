@@ -1,8 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 //import { Product } from '../../models/product.model';
-
 import { StoreService } from '../../services/store.service';
-
 
 @Component({
   selector: 'app-nav',

@@ -9,15 +9,20 @@ import { Product } from '../../models/product.model';
 export class ProductComponent {
 
   @Input('product') product!: Product;
-  @Output() addToCartEvent = new EventEmitter<Product>();
+  @Output() addedCart = new EventEmitter<Product>();
+  @Output() showProduct = new EventEmitter<number>();
 
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  addToCart() {
-    this.addToCartEvent.emit(this.product)
+  onAddToCart() {
+    this.addedCart.emit(this.product)
+  }
+
+  onShowDetail() {
+    this.showProduct.emit(this.product.id)
   }
 
 }

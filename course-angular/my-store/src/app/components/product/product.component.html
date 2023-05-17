@@ -10,7 +10,7 @@
 
       <div class="card--product__bottom-info__price">
         <span>$</span>
-        <h2>{{product.price.toFixed(0) }}</h2>
+        <h2>{{(product.price).toFixed(2).split('.')[0]}}</h2>
         <span>{{(product.price).toFixed(2).split('.')[1]}}</span>
       </div>
 
@@ -20,7 +20,10 @@
     </div>
 
     <div class="card--product__bottom-actions">
-      <button class="card--product__bottom-actions__add-to-cart" (click)="addToCart()">
+      <button class="card--product__bottom-actions__button" (click)="onShowDetail()">
+        <i class="material-icons">info</i>
+      </button>
+      <button class="card--product__bottom-actions__button" (click)="onAddToCart()">
         <i class="material-icons">add_shopping_cart</i>
       </button>
     </div>
